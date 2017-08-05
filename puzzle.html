@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		function checkAnswer(id, trueanswer)
+		{
+			var userAnswer = document.getElementById(id).value;
+			if(userAnswer == trueanswer)
+				return true;
+			else
+				return false;
+		}
+		function checkAnswers()
+		{
+			var goodAnswers = 0;
+
+			if (checkAnswer('puzzle1','лампочка')) goodAnswers++;
+			if (checkAnswer('puzzle2','цепь')) goodAnswers++;
+			if (checkAnswer('puzzle3','арбуз')) goodAnswers++;
+			if (goodAnswers==0)
+			alert("Вы ничего не угадали");
+			if (goodAnswers==3)
+			alert("Поздравляем! Вы отгадали все загадки!");
+			else 
+			alert("Количество правильных ответов "+ goodAnswers);
+		}		
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="My site.html">Главная</a><span>/</span>
+		<a href="#">Загадки</a><span>/</span>
+		<a href="guess.html">Угадайка</a><span>/</span>
+		<a href="guess-2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">	
+		<h3>Игра в загадки</h3>			
+	    <div id="box">
+	    	<h5>Отгадай загадки!</h5>
+	    	<p>Висит груша, нельзя скушать</p>
+	    	<input type="text" id="puzzle1">
+            <p>Не лает, не кусает, а к будке привязана</p>
+            <input type="text" id="puzzle2">
+            <p>Без окон без дверей полна горница людей</p>
+            <input type="text" id="puzzle3">
+            
+            <br><br/>
+            <a href="#" onclick="checkAnswers();">Отправить</a>
+	    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>

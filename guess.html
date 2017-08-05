@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		function Game()
+{
+
+	var iiNumber = Math.floor( Math.random() *100 ) + 1;
+
+	var userNumber = 0;
+
+	var userTry = 0;
+
+	while (userNumber != iiNumber)
+	{
+	userNumber  = prompt ("Введите число");
+		if (userNumber == "exit") 
+		{
+			break;
+		} 
+		userNumber =  parseInt (userNumber);
+		userTry++;
+
+		if (userNumber > iiNumber)
+		{
+		alert ("Число больше загаднного");
+		}
+
+		if (userNumber < iiNumber)
+		{
+		alert ("Число меньше загаднного");
+		}
+	}
+
+	alert ("Поздравляем! Количество попыток: "+ userTry);
+}
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="My site.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Загадки</a><span>/</span>
+		<a href="guess.html">Угадайка</a><span>/</span>
+		<a href="guess-2.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+    <div id="center">	
+		<h3>Угадайка</h3>			
+	    <div id="box">
+	    	<p>Играет 1 игрок. Отгадайте число, и в конце узнаете сколько попыток вам для этого потребовалось.</p>
+            <br><br/>
+            <a href="#" onclick="Game();">Начать игру</a>
+	    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
